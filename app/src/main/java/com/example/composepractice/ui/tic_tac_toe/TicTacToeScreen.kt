@@ -114,9 +114,9 @@ fun Header(playerTurn: Player) {
             }
         }
 
-        TTTBox(text = "Player X", color = playerXBoxColor)
+        PlayerHeaderBox(text = "Player X", color = playerXBoxColor)
         Spacer(modifier = Modifier.width(50.dp))
-        TTTBox(text = "Player O", color = playerOBoxColor)
+        PlayerHeaderBox(text = "Player O", color = playerOBoxColor)
 
     }
 }
@@ -197,7 +197,7 @@ fun GetComposableFromMove(move: Player?) {
 }
 
 @Composable
-fun TTTBox(text: String, color: Color) {
+fun PlayerHeaderBox(text: String, color: Color) {
     Box(
         modifier = Modifier
             .width(100.dp)
