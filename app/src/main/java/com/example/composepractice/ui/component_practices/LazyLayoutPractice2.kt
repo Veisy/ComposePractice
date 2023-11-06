@@ -1,4 +1,4 @@
-package com.example.composepractice.ui
+package com.example.composepractice.ui.component_practices
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement

@@ -1,4 +1,4 @@
-package com.example.composepractice.ui
+package com.example.composepractice.ui.component_practices
 
 import android.widget.Toast
 import androidx.compose.foundation.border

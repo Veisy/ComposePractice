@@ -1,4 +1,4 @@
-package com.example.composepractice.ui
+package com.example.composepractice.ui.component_practices
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectDragGestures

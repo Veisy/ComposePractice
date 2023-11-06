@@ -7,11 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.composepractice.ui.AlertDialogPractice
-import com.example.composepractice.ui.LazyLayoutPractice2
-import com.example.composepractice.ui.SideEffectsPractice
-import com.example.composepractice.ui.dogBreeds
 import com.example.composepractice.ui.theme.ComposePracticeTheme
+import com.example.composepractice.ui.tic_tac_toe.TicTacToeScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    LazyLayoutPractice2(dogs = dogBreeds)
+                    TicTacToeScreen()
                 }
             }
         }

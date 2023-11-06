@@ -1,5 +1,6 @@
-package com.example.composepractice.ui
+package com.example.composepractice.ui.component_practices
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -12,6 +13,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
 
@@ -29,6 +31,7 @@ fun GesturesPractice() {
         val txtState = remember { mutableIntStateOf(0) }
         Box(modifier = Modifier
             .size(200.dp)
+            .background(Color.Gray)
             //.clickable { txtState.intValue += 1 }
             .pointerInput(Unit) {
                 detectTapGestures(
