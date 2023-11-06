@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Compose Practice</string>
+    <string name="simple_text">Simple Text</string>
+    <string name="lorem_ipsum">Proin vestibulum orci in nulla facilisis interdum id quis neque. Donec fermentum eros nunc, malesuada lacinia metus interdum quis. Nullam non bibendum mauris, id gravida tellus. Integer at justo lorem. Maecenas consectetur laoreet nibh, maximus auctor nulla pellentesque a. Morbi at mauris in nulla rhoncus blandit nec sit amet lacus. Nam egestas sem eu purus gravida, id euismod dui tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean tincidunt lectus quis ligula imperdiet, at hendrerit augue pellentesque. Maecenas eget risus libero. Curabitur tempor ante non mi rhoncus gravida. Donec pulvinar enim ac nisi fermentum fringilla. Praesent velit leo, suscipit eget sem et, ultricies egestas lacus. Cras eget nisl vel diam interdum sollicitudin. Fusce vel accumsan ligula. Nunc fringilla, metus non maximus condimentum, purus diam interdum ante, nec tincidunt urna lorem id urna. </string>
+</resources>
