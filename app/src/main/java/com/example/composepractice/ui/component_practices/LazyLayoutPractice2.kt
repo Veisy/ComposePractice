@@ -14,6 +14,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -23,15 +24,21 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 
 @Composable
-fun LazyLayoutPractice2(dogs: List<DogBreed>) {
+fun LazyLayoutPractice2(dogs: List<DogBreed>, modifier: Modifier = Modifier) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .padding(top = 16.dp, start = 8.dp, end = 8.dp, bottom = 8.dp)
             .fillMaxSize()
     ) {
-        LazyColumn(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        LazyColumn(
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             item {
-                Text(text = "Most popular dog breeds", style = Typography().titleLarge)
+                Text(
+                    text = "Most popular dog breeds",
+                    style = Typography().titleLarge
+                )
             }
             items(dogs) { dog ->
                 Row {
