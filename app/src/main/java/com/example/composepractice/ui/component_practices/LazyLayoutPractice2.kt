@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -25,43 +24,38 @@ import coil.compose.AsyncImage
 
 @Composable
 fun LazyLayoutPractice2(dogs: List<DogBreed>, modifier: Modifier = Modifier) {
-    Column(
+    LazyColumn(
         modifier = modifier
-            .padding(top = 16.dp, start = 8.dp, end = 8.dp, bottom = 8.dp)
-            .fillMaxSize()
+            .padding(top = 16.dp, start = 8.dp, end = 8.dp, bottom = 8.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        LazyColumn(
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            item {
-                Text(
-                    text = "Most popular dog breeds",
-                    style = Typography().titleLarge
+        item {
+            Text(
+                text = "Most popular dog breeds",
+                style = Typography().titleLarge
+            )
+        }
+        items(dogs) { dog ->
+            Row {
+                AsyncImage(
+                    model = dog.imageUrl,
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .weight(1f)
+                        .aspectRatio(1f)
+                        .clip(shape = RectangleShape)
+                        .border(width = 2.dp, color = Color.DarkGray, shape = RectangleShape)
                 )
-            }
-            items(dogs) { dog ->
-                Row {
-                    AsyncImage(
-                        model = dog.imageUrl,
-                        contentDescription = null,
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier
-                            .weight(1f)
-                            .aspectRatio(1f)
-                            .clip(shape = RectangleShape)
-                            .border(width = 2.dp, color = Color.DarkGray, shape = RectangleShape)
-                    )
-                    Spacer(modifier = Modifier.size(8.dp))
-                    Column(modifier = Modifier.weight(2f)) {
-                        Text(text = dog.name, style = Typography().titleSmall)
-                        Spacer(modifier = Modifier.size(4.dp))
-                        Text(text = dog.description, style = Typography().bodySmall)
-                    }
+                Spacer(modifier = Modifier.size(8.dp))
+                Column(modifier = Modifier.weight(2f)) {
+                    Text(text = dog.name, style = Typography().titleSmall)
+                    Spacer(modifier = Modifier.size(4.dp))
+                    Text(text = dog.description, style = Typography().bodySmall)
                 }
             }
         }
-
     }
 }
 
