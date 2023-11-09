@@ -9,8 +9,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -48,7 +48,7 @@ fun TicTacToeScreen() {
         Text(
             text = "Tic Tac Toe",
             modifier = Modifier.padding(top = 32.dp, bottom = 32.dp),
-            style = Typography().titleLarge
+            style = MaterialTheme.typography.titleLarge
         )
         Header(playerTurn.value)
         Board(moves = moves, onTap = onTap)
@@ -69,7 +69,7 @@ fun TicTacToeScreen() {
         ) {
             Text(
                 text = text,
-                style = Typography().titleLarge,
+                style = MaterialTheme.typography.titleLarge,
             )
             Spacer(modifier = Modifier.size(32.dp))
             Button(onClick = {

@@ -10,8 +10,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,7 +33,7 @@ fun LazyLayoutPractice2(dogs: List<DogBreed>, modifier: Modifier = Modifier) {
         item {
             Text(
                 text = "Most popular dog breeds",
-                style = Typography().titleLarge
+                style = MaterialTheme.typography.titleLarge
             )
         }
         items(dogs) { dog ->
@@ -50,9 +50,9 @@ fun LazyLayoutPractice2(dogs: List<DogBreed>, modifier: Modifier = Modifier) {
                 )
                 Spacer(modifier = Modifier.size(8.dp))
                 Column(modifier = Modifier.weight(2f)) {
-                    Text(text = dog.name, style = Typography().titleSmall)
+                    Text(text = dog.name, style = MaterialTheme.typography.titleSmall)
                     Spacer(modifier = Modifier.size(4.dp))
-                    Text(text = dog.description, style = Typography().bodySmall)
+                    Text(text = dog.description, style =MaterialTheme.typography.bodySmall)
                 }
             }
         }

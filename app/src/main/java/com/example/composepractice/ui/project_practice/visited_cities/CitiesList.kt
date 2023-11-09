@@ -12,9 +12,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -42,7 +42,7 @@ fun CitiesList(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                Text(text = "No cities available", style = Typography().bodyMedium)
+                Text(text = "No cities available", style = MaterialTheme.typography.bodyMedium)
             }
         } else {
             LazyColumn(
@@ -60,13 +60,13 @@ fun CitiesList(
                     ) {
                         Text(
                             text = it.cityName,
-                            style = Typography().bodyLarge,
+                            style = MaterialTheme.typography.bodyLarge,
                             color = Color.DarkGray
                         )
                         Spacer(modifier = Modifier.size(4.dp))
                         Text(
                             text = it.countryName,
-                            style = Typography().bodyMedium,
+                            style = MaterialTheme.typography.bodyMedium,
                             color = Color.DarkGray
                         )
                     }
