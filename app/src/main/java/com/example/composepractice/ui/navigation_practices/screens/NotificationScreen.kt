@@ -14,15 +14,15 @@ import com.example.composepractice.ui.navigation_practices.NavigationItem
 import com.example.composepractice.ui.navigation_practices.Routes
 
 @Composable
-fun ProfileScreen(navController: NavController) {
+fun Notification(navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly
     ) {
-        Text(text = "${Routes.Profile.label} Screen", style = MaterialTheme.typography.titleLarge)
+        Text(text = "${Routes.Notification.label} Screen", style = MaterialTheme.typography.titleLarge)
         NavigationItem.items.forEach {
-            if (it.route != Routes.Profile.route) {
+            if (it.route != Routes.Notification.route) {
                 Button(onClick = {
                     navController.navigate(it.route) {
                         popUpTo(navController.graph.startDestinationId) {

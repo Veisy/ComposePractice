@@ -6,9 +6,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navDeepLink
-import com.example.composepractice.ui.navigation_practices.screens.FeedScreen
 import com.example.composepractice.ui.navigation_practices.screens.HomeScreen
-import com.example.composepractice.ui.navigation_practices.screens.ProfileScreen
+import com.example.composepractice.ui.navigation_practices.screens.Notification
 import com.example.composepractice.ui.navigation_practices.screens.UserDetailScreen
 import com.example.composepractice.ui.navigation_practices.screens.UsersScreen
 
@@ -20,8 +19,7 @@ fun NavigationHostPractice(navController: NavHostController, modifier: Modifier 
         modifier = modifier
     ) {
         composable(Routes.Home.route) { HomeScreen(navController) }
-        composable(Routes.Feed.route) { FeedScreen(navController) }
-        composable(Routes.Profile.route) { ProfileScreen(navController) }
+        composable(Routes.Notification.route) { Notification(navController) }
         composable(Routes.Users.route) { UsersScreen(navController) }
         composable(
             Routes.UserDetail.route,

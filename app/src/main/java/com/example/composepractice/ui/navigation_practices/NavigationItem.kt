@@ -2,8 +2,7 @@ package com.example.composepractice.ui.navigation_practices
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.List
-import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.ui.graphics.vector.ImageVector
 
 data class NavigationItem(
@@ -19,14 +18,9 @@ data class NavigationItem(
                 icon = Icons.Default.Home
             ),
             NavigationItem(
-                label = Routes.Feed.label,
-                route = Routes.Feed.route,
-                icon = Icons.Default.List
-            ),
-            NavigationItem(
-                label = Routes.Profile.label,
-                route = Routes.Profile.route,
-                icon = Icons.Default.Person
+                label = Routes.Notification.label,
+                route = Routes.Notification.route,
+                icon = Icons.Default.Notifications
             ),
         )
     }
